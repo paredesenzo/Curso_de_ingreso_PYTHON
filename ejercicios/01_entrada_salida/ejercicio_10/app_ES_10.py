@@ -42,7 +42,39 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        importe = self.txt_importe.get()
+        descuento = self.txt_descuento.get()
+
+        importe = float(importe)
+        descuento = float(descuento)
+
+        pago = importe - (importe * (descuento / 100))
+
+        alert("Descuento", f"El importe a pagar era {importe} con el descuento es: {pago:.2f}")
+
+        
+        '''
+        importe = self.txt_iporte.get()
+        importe = float(importe)
+        descuento = self.txt_descuento.get()
+        descuento = int(descuento)
+
+        importe_descuento = importe - (importe * descuento / 100)
+        importe_total = importe - importe_descuento 
+        alert("utn", importe_total)
+        mensaje = f"Ud debera pagar: {importe_total}. Se aplico un descuento de: {importe_descuento}"
+        alert("UTN", mensaje)
+
+        self.txt_total.delete(0, 100)
+        
+        self.txt_total.delete(0, len(self.txt_importe.get()))
+        self.txt_total.delete(0, tkinter.end)
+        self.txt_total.delete(0, "end")
+        self.txt_total.insert(0, importe_total)
+        
+        alert("utn", "descuento: {0}".format(importe descuento))
+        alert("utn", f"descuento: {importe_descuento}")
+        '''
 
 
 if __name__ == "__main__":
