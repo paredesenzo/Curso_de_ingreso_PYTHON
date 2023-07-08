@@ -34,7 +34,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = self.txt_edad.get()
+        
+        edad = int(edad)
+        if edad >= 18:
+
+            #todo lo que esta dentro del condicionar tiene que tener dos puntos.
+            alert("UTN", "Usted es mayor de edad")
 
         
         
