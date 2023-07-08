@@ -14,6 +14,14 @@ Enunciado:
 Al presionar el botón  'Mostrar', se deberá obtener un nombre utilizando el Dialog Prompt 
 y luego mostrarlo en la caja de texto txt_nombre (.delete / .insert )
 '''
+"""
+    nombre_alumno = prompt("titulo", "lo que quiere comunicar")
+    alert("titulo", "mensaje que se quiere comunicar")
+    nombre = self.txt_nombre.get() das un valor a la funcion
+        print(nombre) 
+        self.txt_nombre.delete(0, tkinter.END) borrar un nombre de principio a fin
+        self.txt_nombre.insert(0, nombre)
+"""
 
 class App(customtkinter.CTk):
     
@@ -34,7 +42,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre = prompt("ingreso", "ingrese su nombre")
+        self.txt_nombre.delete(0, tkinter.END)
+        self.txt_nombre.insert(0, nombre)
         
     
 if __name__ == "__main__":
