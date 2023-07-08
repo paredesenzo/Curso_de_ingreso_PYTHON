@@ -63,7 +63,25 @@ class App(customtkinter.CTk):
         self.btn_calcular.grid(row=3, pady=10, columnspan=2, sticky="nsew")
 
     def btn_calcular_on_click(self):
-        pass
+        largo = self.txt_largo.get()
+        ancho = self.txt_ancho.get()
+
+        largo = float(largo)
+        ancho = float(ancho)
+
+        area = largo * ancho
+
+        perimetro = (largo + ancho) * 2
+
+        cantidad_postes_gruesos = perimetro // 250 + 4
+
+        cantidad_postes_fino = perimetro // 12 - cantidad_postes_gruesos
+
+        cantidad_varillas = perimetro // 2 - cantidad_postes_fino - cantidad_postes_gruesos
+
+        cantidad_alambre = perimetro * 7 
+
+        alert("Mensaje", f"A) \n La superficie es: {area:.2f} m2. \n El permitro es: {perimetro:.2f} m. \n B) \n La cantidad de postes GRUESOS es de: {cantidad_postes_gruesos:.0f}. \n  C) \n La cantidad de postes finos son: {cantidad_postes_fino:.0f} \n D) \n La cantidad de varillas son: {cantidad_varillas:.0f} \n E) \n La cantidad de alambres es de: {cantidad_alambre:.2f} m")
 
 
 if __name__ == "__main__":
