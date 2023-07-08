@@ -34,7 +34,27 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        #edad = int(self.txt_edad.get())
+        edad = self.txt_edad.get()
+        alert("UTN", "HOLA")
+        edad = int(edad)
+        if edad == 18:
+
+            #todo lo que esta dentro del condicionar tiene que tener dos puntos.
+            alert("UTN", "Usted tiene 18 años")
+        
+        alert("UTN", "CHAU")
+
+
+        """
+        if condicion: 
+            sentencias_true
+        
+        operadores:
+            aritmeticos: +, -, *, /, %, //, **
+            relacionales: <, >, <=, >=, !=, == : es un booleanon (verdadero = true o falso = false)
+            logicos: and (y), or (o), not (no)
+        """
 
         
         
