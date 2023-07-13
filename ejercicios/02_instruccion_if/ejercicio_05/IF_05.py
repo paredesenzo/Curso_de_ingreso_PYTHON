@@ -46,8 +46,17 @@ class App(customtkinter.CTk):
     
             alert("UTN", "CHAU")
 
-        
-        
+
+'''
+        if edad > 17 or edad < 13:
+        alert("utn", "no es adolecente")
+
+        if not(edad > 17 and edad < 13):
+        alert("utn", "no es adolecente")
+
+        if 12//(edad + 0**bool(edad)) - edad//18
+        alert("utn", "no es adolescente)
+        '''
     
 if __name__ == "__main__":
     app = App()

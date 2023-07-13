@@ -29,7 +29,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero = int(random.random() *10) + 1
+        #numero = random.randint(1, 10)
+
+        print(numero)
         
 
 if __name__ == "__main__":

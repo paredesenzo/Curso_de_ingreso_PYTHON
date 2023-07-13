@@ -37,7 +37,54 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        mes = self.combobox_mes.get()
+
+        if mes == "Enero":
+            alert("UTN", "que comiences bien el año")
+        elif mes == "Marzo":
+            alert("UTN", "a clases")
+        elif mes == "Julio":
+            alert("UTN", "se vienen las vaciones")
+        elif mes == "diciembre":
+            alert("UTN", "felices fiestas")
+
+        '''
+        if mes == enero:
+            alert("UTN", "que comience bien el año)
+        else: 
+            if mes =="Marzo"
+                alert("UTN", "A clase")
+            else:
+                if mes == "Marzo":
+                    alert("UTN", "se vienen las vaciones"
+                else:
+                    if mes == "Julio":
+                        alert("UTN", "se viene las vaciones")
+                    else:
+                        if mes == "Dciembre":
+                            alert("UTN", "felices fiestas")
+                        else: 
+                            alert("UTN", "otro mes")
+
+Match: se usa por comodidad por ejemplo (remplaza el ==)
+        match mes:         #or
+            case "Enero" | "Febrero" | "Septiembre":
+                alert("UTN", "que comiences bien el año")
+            case "Marzo":
+                alert("UTN", "a clases")
+            case "Julio":
+                alert("UTN", "se vienen las vaciones")
+            case "Diciembre":
+                alert("UTN", "felices fiestas")
+            case _:
+                alert("UTN", "otro mes")
+
+
+
+
+                
+
+        '''
     
     
 if __name__ == "__main__":
