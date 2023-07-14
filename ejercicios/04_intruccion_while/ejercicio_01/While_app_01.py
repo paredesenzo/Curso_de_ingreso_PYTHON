@@ -99,6 +99,98 @@ class App(customtkinter.CTk):
         print(variable)
         print(type(variable))
     
+        '''
+        Me ingresan 5 edades y debo calcular un promedio de edades.
+        #los contadores, acumuladores se inicializan en 0.
+        
+        contador = 0
+        acumulador = 0
+                #0
+    while contador < 5:
+        edad_ingresada = prompt("UTN", "Ingrese su edad")
+        edad_ingresada = int(edad_ingresada)
+        
+        #Suma de las edades
+        acumulador = acumalador + edad_ingresada
+        
+        #contador +=1 es lo mismo que abajo.
+        contador = contador + 1
+
+                #suma edades / cantidad de edades
+    promedio = acumulador / contador
+    print(promedio)
+
+
+    #me ingrsan edades hasta que el usuario quiera y debo calcular un promedio de edades
+
+    contador = 0
+    acumulador = 0
+    respuesta = True #1, o un string "hola"
+    #flag_principal = true
+
+        #flag_principal
+    while respuesta == true:
+        edad_ingresada = prompt("UTN", "ingrese su edad")
+        edad_ingresada = int(edad_ingresada)
+
+        acumulador = acumulador + edad_ingresada
+
+        contador = contador + 1
+                    #en vez de "question" podemos usar "prompt" usando si / no.
+        
+        #si se usa flag se usa if en vez de respuesta
+        #if respuesta == false
+            #flag_principal = false
+        
+        respuesta = question("UTN", "Desea seguir ingresando edades?")
+    promedio = acumulador / contador
+    print(promedio)
+
+
+    #while edad_ingresada.isdigit() == false
+        edad_ingresada = prompt("UTN", promt="reingrsar edad")
+
+        
+    otro metodo con if
+
+    while true:
+        edad_ingresada = prompt("UTN", prompt="Ingresar edad")
+        while edad_ingresada.isdigit() == False:
+            edad_ingresada = prompt("UTN", prompt="reingrese su edad")
+
+        edad_ingresada = int(edad_ingresada)
+        acumulador = acumulador + edad_ingresada
+        contador = contador + 1
+        promedio = acumulador / contador
+        print(promedio)    
+        
+        tp 5 si no es un numero usar insdigit()
+        
+        '''
+        
+        '''
+        contador = 0
+        acumulador = 0
+        
+        while contador < 5:
+        edad_ingresada = prompt("UTN", "Ingrese su edad")
+        edad_ingresada = int(edad_ingresada)
+        
+        #Suma de las edades
+        acumulador = acumalador + edad_ingresada
+        
+        #contador +=1 es lo mismo que abajo.
+        contador = contador + 1
+
+                #suma edades / cantidad de edades
+    promedio = acumulador / contador
+    print(promedio)
+
+
+    #while edad_ingresada < 18 oredad_ingresada > 90:
+        edad_ingresada =prompt("UTN", prompt="reingrese su edad")
+        edad_ingresada = int(edad_ingrsada)
+        '''
     
 if __name__ == "__main__":
     app = App()

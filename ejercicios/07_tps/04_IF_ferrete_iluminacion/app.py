@@ -38,6 +38,50 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
+
+        marca = self.combobox_marca.get()
+        cantidad =  int(self.combobox_cantidad.get())
+        precio_unidad = 800
+
+        total = precio_unidad * cantidad
+
+        if cantidad > 5:
+            total = total * 0.5
+        else:
+            if cantidad == 5:
+                if marca == "ArgentinaLuz":
+                    total = total * 0.6
+                else:
+                    total = total *0.7
+            else:
+                if cantidad == 4:
+                    if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+                        total = total * 0.75
+                    else:
+                        total = total * 0.8
+                else:
+                    if cantidad == 3:
+                        if marca == "ArgentinaLuz":
+                            total = total * 0.85
+                        else:
+                            if marca == "FelipeLamparas":
+                                total = total * 0.9
+                            else:
+                                total = total * 0.95
+
+        alert("descuento", f"El precio de su compra es de: {total}")
+
+
+
+
+
+
+
+
+
+
+
+
         '''
         empresa = self.combobox_marca.get()
         cantidad_comprada = self.combobox_cantidad.get()
@@ -50,7 +94,7 @@ class App(customtkinter.CTk):
         else:
         
             alert("UNT", "usted tiene que pagar el monto total")
-        '''
+        
 
         cantidad = int(self.combobox_cantidad.get())
         empresa = self.combobox_marca.get()
@@ -62,6 +106,7 @@ class App(customtkinter.CTk):
         if cantidad > 5:
             primer_descuento = total * 0.5
             alert("UTN", f"El precio de su compra es {primer_descuento}")
+    '''
     
 if __name__ == "__main__":
     app = App()
