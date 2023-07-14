@@ -39,6 +39,8 @@ class App(customtkinter.CTk):
 
     def btn_calcular_on_click(self):
 
+        #trabajo echo en clase
+
         marca = self.combobox_marca.get()
         cantidad =  int(self.combobox_cantidad.get())
         precio_unidad = 800
@@ -83,6 +85,8 @@ class App(customtkinter.CTk):
 
 
         '''
+        #Como lo habia encarado yo
+
         empresa = self.combobox_marca.get()
         cantidad_comprada = self.combobox_cantidad.get()
 
