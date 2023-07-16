@@ -25,13 +25,13 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_numero_on_click(self):
-        number = prompt("Numero", "ingrese un numero")
+        number = prompt("Numero", "ingrese un numero del 0 al 9")
         print(number.isdigit())
-        '''
-        while(int(number) > 9 or int(number) < 0)
-        number = prompt("numero", "Ingrese un numero")
+        
+        while(int(number) >= 10  or int(number) < 0):
+            number = prompt("numero", "Ingrese un numero valido")
         alert("numero", "Numero aceptado")
-        '''
+        
     
 if __name__ == "__main__":
     app = App()

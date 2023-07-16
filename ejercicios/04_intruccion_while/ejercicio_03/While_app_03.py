@@ -88,7 +88,7 @@ class App(customtkinter.CTk):
         print("Fueron mas gatos que perros y loros)
     '''
     '''
-    Bandera o flag es un concepto por ejemplo
+    Bandera o flag es un concepto
 
     '''
 
