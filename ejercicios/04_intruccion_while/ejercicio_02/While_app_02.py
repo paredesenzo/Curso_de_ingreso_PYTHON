@@ -24,7 +24,12 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        pass
+        contador = 0
+        while contador > -11:
+            alert("UTN", f"{contador}")
+            contador -= 1
+        else:
+            alert("UTN", "fin de los numeros ascendentes")
     
     
 if __name__ == "__main__":
