@@ -32,6 +32,20 @@ class App(customtkinter.CTk):
 
         alert("UTN", "Se ha ingresado con exito")
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     '''
     como se busca un maximo?
 
@@ -75,7 +89,7 @@ class App(customtkinter.CTk):
     '''
     '''
     Bandera o flag es un concepto por ejemplo
-        
+
     '''
 
 if __name__ == "__main__":
