@@ -36,8 +36,74 @@ class App(customtkinter.CTk):
                               columnspan=2, sticky="nsew")
 
     def btn_comenzar_ingreso_on_click(self):
-        pass
+        
+        #maximo = 0
+        #minimo= 1000
+        
+        #numero = int(prompt("UTN", "ingresar un numero"))
+        #maximo = numero
+        #minimo = numero no le copa a german
 
+        maximo = 0
+        minimo = 0
+
+        bandera_primer_ingreso = False
+
+        #seguir = True no sirve de nada poner asi
+        
+        while True: #esto es un bucle infinito 
+            #Entradas
+            numero = prompt("UTN", "Ingrese un numero")
+            #nuermo = int(prompt("UTN", "Ingrese un numero")) #prompt devuelve un string o None
+            
+            if numero == None:
+                break
+
+            numero = int(numero)
+
+            #Procesos: Buscar maximo y minimo.
+            
+            if bandera_primer_ingreso == False:
+                maximo = numero
+                maximo = numero
+                bandera_primer_ingreso= True
+            else:
+                if numero > maximo:
+                    maximo = numero
+                if numero < minimo:
+                    minimo = numero 
+        
+            #############################
+
+            if numero > maximo or bandera_primer_ingreso == False:
+                maximo = numero
+            if numero < minimo or bandera_primer_ingreso == False:
+                minimo = numero
+            bandera_primer_ingreso = True    
+
+            #seguir = question("UTN", "Desea seguir?")
+
+
+        #end while
+
+        #Salida
+        self.txt_maximo.delete(0, "end")
+        self.txt_maximo.insert(0, str(maximo))
+
+        self.txt_minimo.delete(0, "end")
+        self.txt_minimo.insert(0, str(minimo))
+        
+
+'''
+if numero == None or numero > maximo:
+                maximo = numero
+            if numero == None or numero < minimo:
+                minimo = numero
+
+'''
+'''
+
+'''
 
 if __name__ == "__main__":
     app = App()
